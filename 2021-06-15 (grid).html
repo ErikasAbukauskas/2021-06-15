@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid metodas</title>
+
+
+    <style>
+        .grid-container{
+            display: grid;
+            grid-template-columns: auto auto auto auto auto auto ;
+            grid-column-gap: 10px;
+            grid-row-gap: 10px;
+
+        }
+
+        @media screen and (max-width: 1000px) {
+            .grid-container {
+            grid-template-columns: auto auto ;
+            }
+
+            .grid-item-1 {
+                grid-column: auto !important;
+                grid-row: auto  !important;
+            }
+        }
+        
+
+        @media screen and (max-width: 500px) {
+            .grid-container{
+            grid-template-columns: auto ;
+            }
+        }
+        
+
+
+        .zalia{
+            background-color: green;
+        }
+
+        .ruda{
+            background-color: brown;
+        }
+
+        .raudona{
+
+            background-color: red;
+        }
+
+        .grid-item-1 {
+            /* grid-column-start:1 ; */
+            /* grid-column-end:3 ; */
+            grid-row-start:1 ;
+            grid-row-end:3 ;
+
+            grid-column:1 / span 6 ;
+
+            grid-row:1 / span 20 ;
+            
+        }
+
+        /* .grid-item-2 { */
+            /* grid-column-start:1 ; */
+            /* grid-column-end:3 ; */
+            /* grid-row-start:3 ; */
+            /* grid-row-end:24 ; */
+        /* } */
+        .grid-item {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+        }
+        .flex-container {
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .grid-container-1 {
+            display: grid;
+            grid-template-areas: 
+            "pirmas pirmas pirmas pirmas  antras antras antras"
+            "trecias trecias trecias trecias trecias trecias trecias"
+            "ketvirtas penktas penktas penktas penktas penktas penktas"
+            "ketvirtas penktas penktas penktas penktas penktas penktas"
+            "ketvirtas penktas penktas penktas penktas penktas penktas"
+            "ketvirtas penktas penktas penktas penktas penktas penktas"
+            "ketvirtas penktas penktas penktas penktas penktas penktas"
+            ;
+        }
+
+        .grid-elemenat-1 {
+            grid-area: pirmas;
+        }
+
+        .grid-elemenat-2 {
+            grid-area: antras;
+        }
+        .grid-elemenat-3 {
+            grid-area: trecias;
+        }
+
+        .grid-elemenat-4 {
+            grid-area: ketvirtas;
+        }
+        .grid-elemenat-5 {
+            grid-area: penktas;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="grid-container">
+        <div class="grid-item grid-item-1 zalia">1</div>
+        <div class="grid-item grid-item-2 ruda">2</div>
+        <div class="grid-item grid-item-3 raudona">3</div>
+        <div class="grid-item grid-item-4 zalia">4</div>
+        <div class="grid-item ruda">5</div>
+        <div class="grid-item raudona">6</div>
+        <div class="grid-item zalia">7</div>
+        <div class="grid-item ruda">8</div>
+        <div class="grid-item raudona">9</div>
+        <div class="grid-item zalia">10</div>
+        <div class="grid-item ruda">11</div>
+        <div class="grid-item raudona">12</div>
+        <div class="grid-item zalia">13</div>
+        <div class="grid-item ruda">14</div>
+        <div class="grid-item raudona">15</div>
+        <div class="grid-item zalia">16</div>
+        <div class="grid-item ruda">17</div>
+        <div class="grid-item raudona">18</div>
+        <div class="flex-container raudona">19</div> 
+    </div>
+
+    <div class="grid-container-1">
+        <div class="grid-elemenat-1 zalia">1</div>
+        <div class="grid-elemenat-2 ruda">2</div>
+        <div class="grid-elemenat-3 raudona">3</div>
+        <div class="grid-elemenat-4 zalia">4</div>
+        <div class="grid-elemenat-5 ruda">5</div>
+    </div>
+    
+</body>
+</html>
